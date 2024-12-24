@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MHOyS+s88cLEbTpZTV6ZeVo6+Yxqm+lLFMXnfHgf6Ok=",
+  "Source": "PasswordCheck.API",
+  "BasePath": "_content/PasswordCheck.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
