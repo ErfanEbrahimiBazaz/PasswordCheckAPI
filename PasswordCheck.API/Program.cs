@@ -15,7 +15,9 @@ builder.Services.AddControllers()
 //  no caching and database operation
 // in N layer architecture -> AddScoped or AddTransient
 builder.Services.AddScoped<IPasswordStrengthChecker, PasswordStrengthChecker>();
-builder.Services.AddScoped<IPasswordBreachCheckService, PasswordBreachCheckService>();
+//builder.Services.AddScoped<IPasswordBreachCheckService, PasswordBreachCheckService>();
+builder.Services.AddHttpClient<IPasswordBreachCheckService, PasswordBreachCheckService>();
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

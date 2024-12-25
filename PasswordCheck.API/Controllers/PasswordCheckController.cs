@@ -16,8 +16,8 @@ namespace PasswordCheck.API.Controllers
             IPasswordStrengthChecker passwordStrengthChecker,
             IPasswordBreachCheckService passwordBreachCheckService)
         {
-            this._passwordStrengthChecker = passwordStrengthChecker;
-            //this._passwordBreachCheckService = passwordBreachCheckService;
+            this._passwordStrengthChecker = passwordStrengthChecker ?? throw new ArgumentNullException(nameof(passwordStrengthChecker));
+            this._passwordBreachCheckService = passwordBreachCheckService ?? throw new ArgumentNullException(nameof(passwordBreachCheckService));
         }
 
         [HttpPost("echo")]
@@ -46,15 +46,15 @@ namespace PasswordCheck.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        public ActionResult Passwordbreachedcheck(PasswordRequest pwd)
+        [HttpGet("breach/")]
+        public async Task<ActionResult> Passwordbreachedcheck([FromBody] PasswordRequest pwd)
         {
             if (string.IsNullOrEmpty(pwd.Password))
             {
                 return BadRequest("password cannot be empty!");
             }
-            PasswordBreachResponse response = new PasswordBreachResponse();
-            response = _passwordBreachCheckService.CheckBreach(pwd);
+            //Task<PasswordBreachResponse> response = new PasswordBreachResponse();
+            PasswordBreachResponse  response = await _passwordBreachCheckService.CheckBreach(pwd);
 
             return Ok(response);
         }
