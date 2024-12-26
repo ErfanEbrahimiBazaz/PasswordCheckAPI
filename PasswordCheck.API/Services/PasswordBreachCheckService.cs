@@ -14,17 +14,21 @@ namespace PasswordCheck.API.Services
     {
         // send Get request to the pwnd endpoint and returns how many times a password is breached.
         private readonly HttpClient _httpClient;
-        public PasswordBreachCheckService(HttpClient httpClient)
+        private readonly string _hibpEndpoint = string.Empty;
+
+        public PasswordBreachCheckService(HttpClient httpClient, IConfiguration configuration)
         {
-            _httpClient = httpClient; // ?? new ArgumentNullException(nameof(httpClient));
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+            _hibpEndpoint = configuration["hibpEndpoint"] ?? throw new ArgumentNullException("hibpEndpoint is not configuredd in appSettings.json");
         }
         public async Task<PasswordBreachResponse> CheckBreach(PasswordRequest password)
         {
 
-
+            
             string range = PasswordOperations.CalculateSHA1Hash(password.Password);
 
-            string url = $"https://api.pwnedpasswords.com/range/{range}";
+            //string url = $"https://api.pwnedpasswords.com/range/{range}";
+            string url =  $"{_hibpEndpoint}{range}";
 
             //PasswordBreachResponse passwordBreachResponse = new PasswordBreachResponse();
 
