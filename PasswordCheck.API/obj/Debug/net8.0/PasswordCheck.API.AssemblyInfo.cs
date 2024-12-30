@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PasswordCheck.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+780dfb2b8fd46ee77a749489d7554afaff4b381d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+896d4b8ae8dd62edc698e30cab328634d6aba07b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PasswordCheck.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PasswordCheck.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

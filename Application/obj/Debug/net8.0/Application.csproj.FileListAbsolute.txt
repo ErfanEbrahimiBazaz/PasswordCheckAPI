@@ -1,0 +1,12 @@
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\bin\Debug\net8.0\Application.deps.json
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\bin\Debug\net8.0\Application.dll
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\bin\Debug\net8.0\Application.pdb
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.sourcelink.json
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.dll
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\refint\Application.dll
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\Application.pdb
+C:\Users\erfan\Desktop\Workspace\IT\API-dotnet\PasswordCheck.API\Application\obj\Debug\net8.0\ref\Application.dll
