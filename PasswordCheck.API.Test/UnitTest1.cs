@@ -15,7 +15,8 @@ namespace PasswordCheck.API.Test
 
             int strength = passwordStrengthChecker.PasswordStrength(password);
             // Assert
-            Assert.Equal(strength, 1);
+            // expected, actual
+            Assert.Equal(1, strength);
 
         }
 
@@ -25,7 +26,7 @@ namespace PasswordCheck.API.Test
             PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
             string password = "abc";
             int strength = passwordStrengthChecker.PasswordStrength(password);
-            Assert.Equal(strength, 1);
+            Assert.Equal(1, strength);
         }
 
         [Fact]
@@ -34,7 +35,7 @@ namespace PasswordCheck.API.Test
             PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
             string password = "ABC";
             int strength = passwordStrengthChecker.PasswordStrength(password);
-            Assert.Equal(strength, 1);
+            Assert.Equal(1, strength);
         }
 
         [Fact]
@@ -43,7 +44,7 @@ namespace PasswordCheck.API.Test
             PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
             string password = "ABC123abc";
             int strength = passwordStrengthChecker.PasswordStrength(password);
-            Assert.Equal(strength, 3);
+            Assert.Equal(3, strength);
         }
 
 
@@ -53,7 +54,7 @@ namespace PasswordCheck.API.Test
             PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
             string password = "ABC123abc@";
             int strength = passwordStrengthChecker.PasswordStrength(password);
-            Assert.Equal(strength, 4);
+            Assert.Equal(4, strength);
         }
 
         [Fact]
@@ -62,7 +63,7 @@ namespace PasswordCheck.API.Test
             PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
             string password = "ABC123abc@#!$%#b";
             int strength = passwordStrengthChecker.PasswordStrength(password);
-            Assert.Equal(strength, 5);
+            Assert.Equal(5, strength);
         }
 
         [Fact]
@@ -70,7 +71,8 @@ namespace PasswordCheck.API.Test
         {
             PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
             string password = string.Empty;
-            Assert.Equal(passwordStrengthChecker.PasswordStrength(password), 0);
+            int strength = passwordStrengthChecker.PasswordStrength(password);
+            Assert.Equal(0, strength);
         }
     }
 }
