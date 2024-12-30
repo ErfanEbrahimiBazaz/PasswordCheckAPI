@@ -4,6 +4,7 @@ namespace PasswordCheck.API.Test
 {
     public class PasswordStrengthCheckerTest
     {
+
         [Fact]
         public void WeakNumericPasswordTest()
         {
@@ -62,6 +63,14 @@ namespace PasswordCheck.API.Test
             string password = "ABC123abc@#!$%#b";
             int strength = passwordStrengthChecker.PasswordStrength(password);
             Assert.Equal(strength, 5);
+        }
+
+        [Fact]
+        public void EmptyPassword()
+        {
+            PasswordStrengthChecker passwordStrengthChecker = new PasswordStrengthChecker();
+            string password = string.Empty;
+            Assert.Equal(passwordStrengthChecker.PasswordStrength(password), 0);
         }
     }
 }
